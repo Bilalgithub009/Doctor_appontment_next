@@ -55,7 +55,7 @@ export default  function DoctorSection({isHome}) {
               </SelectTrigger>
               <SelectContent>
                 
-                {Categories.map((category) => (
+                {Categories.map((category , index) => (
                   <SelectItem key={category} value={category}>
                     {category}
                   </SelectItem>
@@ -64,17 +64,13 @@ export default  function DoctorSection({isHome}) {
             </Select>
                 </div>
         )}
-
-   
-  
-   
-   
   </div>
   
 <div className="grid my-3 grid-cols-1 md:grid-cols-2 mt-10 lg:grid-cols-3 gap-3">
 
     {
-   filtered.map((doctor)=> <Card>
+      filtered.map((doctor, index)=> <Card>
+     <div key={doctor.id || index}>
    <CardHeader className="flex  justify-evenly">
    <Avatar>
     <AvatarImage src="https://github.com/shadcn.png"/>
@@ -108,13 +104,13 @@ export default  function DoctorSection({isHome}) {
     <h1 className=" ms-3 font-bold flex justify-between">{doctor.appointmentTime}</h1>
     
    </div>
-   
 
    
  
   </CardContent>
 
-   }
+}
+</div>
    
    
    <CardFooter>
