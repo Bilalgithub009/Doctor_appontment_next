@@ -27,6 +27,7 @@
     "multi-select": "^0.3.4",
     "multiselect": "^0.9.12",
     "next": "14.2.16",
+    "next-auth": "^5.0.0-beta.25",
     "react": "^18",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
